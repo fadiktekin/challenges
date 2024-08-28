@@ -13,59 +13,65 @@ Let's fix this mess!
   </head>
   <!--someone forgot to wrap the content of our webpage with an HTML element,
 	which one was it again?-->
-  <div>
-    <div>
-      <div>Jane Doe</div>
+  <body>
+    <header>
+      <h1>Jane Doe</h1>
       <!--Which elements could be used to link to parts of the webpage,
 		which appear below?-->
-      <div id="nav">
-        <div>About Me</div>
-        <div>Contact</div>
-        <div>Skillset</div>
-      </div>
-    </div>
+    </header>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#skills">Skillset</a></li>
+      </ul>
+    </nav>
+
     <!--Looks like the following part is the central content of our webpage.-->
-    <div>
-      <div id="about-me">
-        <div>About me</div>
+    <main>
+      <article id="about-me">
+        <h2>About me</h2>
         <div>
           Hi there! Welcome to my personal website. Here is gathered the most
           important information about me. If you want to work with me or get to
           know me, please don't hesitate to get in contact.
         </div>
         <!--What element could be used to combine an image with a descriptive caption?-->
-        <div>
+        <figure>
           <img
-            src="https://source.unsplash.com/random/400x300?fruit"
-            alt="a random picture"
+            width="300"
+            height="400"
+            src="https://images.pexels.com/photos/2660348/pexels-photo-2660348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="High-Angle Photo of Person Wearing Leather Shoes"
           />
-          <div>
+          <figcaption>
             A random picture, because I would like to maintain my privacy and
             let my code speak for me, instead of images.
-          </div>
-        </div>
-      </div>
+          </figcaption>
+        </figure>
+      </article>
 
-      <div id="contact">
-        <div>Contact</div>
+      <article id="contact">
+        <h2>Contact</h2>
         <!--When clicking on these element, nothing happens! But I want to be redirected to the other websites. Why is it not working?-->
-        <div href="https://github.com/spiced-academy">GitHub</div>
-        <div href="https://de.linkedin.com/">LinkedIn</div>
-        <div href="https://codesandbox.io/">CodeSandbox</div>
-      </div>
+        <a href="https://github.com/spiced-academy" target="_blank">GitHub</a>
+        <a href="https://de.linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="https://codesandbox.io/" target="_blank">CodeSandbox</a>
+      </article>
 
-      <div id="skills">
-        <div>Skillset</div>
+      <article id="skills">
+        <h2>Skillset</h2>
         <!--This part could use some bulletpoint to be more structured-->
-        <div>
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>JavaScript</div>
-          <div>React</div>
-          <div>Painting rainbows</div>
-          <div>Party</div>
-        </div>
-      </div>
-    </div>
-  </div>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Painting rainbows</li>
+          <li>Party</li>
+        </ul>
+      </article>
+    </main>
+  </body>
 </html>
