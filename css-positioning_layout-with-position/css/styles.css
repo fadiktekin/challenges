@@ -98,5 +98,6 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 300;
+  left: 5px;
+  z-index: 2;
 }
