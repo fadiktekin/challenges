@@ -25,7 +25,6 @@ Hint: you need only two lines of code in your grid container
   --grey-light: #f5f6f6;
 }
 
-
 *,
 *::before,
 *::after {
@@ -56,19 +55,19 @@ body {
 
 .teaser-grid__teaser--spring {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://source.unsplash.com/random/600x300?spring");
+    url("https://plus.unsplash.com/premium_photo-1673799490772-2ea0b711e43b?q=80&w=2822&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .teaser-grid__teaser--summer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://source.unsplash.com/random/600x300?summer");
+    url("https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .teaser-grid__teaser--autumn {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://source.unsplash.com/random/600x300?autumn");
+    url("https://plus.unsplash.com/premium_photo-1667126444822-94fb21279436?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .teaser-grid__teaser--winter {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://source.unsplash.com/random/600x300?winter");
+    url("https://images.unsplash.com/photo-1477601263568-180e2c6d046e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 .teaser-grid__link {
