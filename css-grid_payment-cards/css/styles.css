@@ -42,7 +42,9 @@ body {
   padding: 2rem;
   max-width: 50rem;
 
-  /* Add styles to the container */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .cards__option {
