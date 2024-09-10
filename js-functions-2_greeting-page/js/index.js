@@ -22,12 +22,31 @@ Change the contents of this page depending on the current day and time.
 
 const display = document.querySelector('[data-js="display"]');
 
+function isInBetween(x, min, max) {
+  return x >= min && x <= max;
+}
 function getGreeting() {
-  // Code here
+  const currentTime = new Date().getHours();
+  if (isInBetween(currentTime, 6, 12)) {
+    return "Good Morning";
+  } else if (isInBetween(currentTime, 13, 18)) {
+    return "Good Afternoon";
+  } else if (isInBetween(currentTime, 19, 22)) {
+    return "Good Evening";
+  } else {
+    return "Good Night";
+  }
 }
 
 function getDayColor() {
-  // Code here
+  const currentWeekday = new Date().getDay();
+  if (currentWeekday === 1) {
+    return "darkgray";
+  } else if (isInBetween(currentWeekday, 2, 5)) {
+    return "lightblue";
+  } else if (isInBetween(currentWeekday, 6, 7)) {
+    return "hotpink";
+  }
 }
 
 display.textContent = getGreeting();
