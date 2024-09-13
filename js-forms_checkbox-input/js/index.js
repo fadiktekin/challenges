@@ -3,22 +3,33 @@ console.clear();
 const form = document.querySelector('[data-js="form"]');
 const tosError = document.querySelector('[data-js="tos-error"]');
 const tosCheckbox = document.querySelector('[data-js="tos"]');
+const successElement = document.querySelector('[data-js="success"]');
 
-function hideTosError() {
-  tosError.setAttribute("hidden", "");
+hideElement(tosError);
+hideElement(successElement);
+
+function hideElement(element) {
+  element.setAttribute("hidden", "");
 }
 
-function showTosError() {
-  tosError.removeAttribute("hidden");
+function showElement(element) {
+  element.removeAttribute("hidden");
 }
+
+tosCheckbox.addEventListener("input", (event) => {
+  event.target.checked ? hideElement(tosError) : showElement(tosError);
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // --v-- write your code here --v--
+  const formElements = event.target.elements;
+  if (!formElements.tos.checked) {
+    showElement(tosError);
+    return;
+  }
 
-  // --^-- write your code here --^--
-
+  showElement(successElement);
   // eslint-disable-next-line no-alert
   alert("Form submitted");
 });
