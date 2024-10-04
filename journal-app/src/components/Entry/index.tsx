@@ -1,5 +1,6 @@
 import "./Entry.css";
-import star from "../../assets/resources/star.svg";
+
+import { FavoriteButton } from "../FavoriteButton";
 
 export function Entry() {
   const now = new Date().toISOString();
@@ -9,7 +10,7 @@ export function Entry() {
       <time dateTime={now}>{now}</time>
       <div className="title-icon">
         <h3>“That’s life in the city“</h3>
-        <img src={star} alt="" srcset="" />
+        <FavoriteButton />
       </div>
       <p>
         Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si

@@ -1,4 +1,5 @@
 import "./EntryForm.css";
+import { Button } from "../Button";
 
 export function EntryForm() {
   function onFormSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -13,7 +14,7 @@ export function EntryForm() {
     <form className="form" onSubmit={onFormSubmit}>
       <input name="motto" type="text" />
       <textarea name="notes" id=""></textarea>
-      <button type="submit">Notes</button>
+      <Button type="submit">Notes</Button>
     </form>
   );
 }
