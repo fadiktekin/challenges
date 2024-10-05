@@ -54,4 +54,5 @@ textarea,
 input {
   background-color: white;
   border: 1px var(--color-granite) solid;
+  color: var(--color-granite);
 }
