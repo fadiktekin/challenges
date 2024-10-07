@@ -1,47 +1,35 @@
-import { Tabs } from "../Tabs";
 import { Entry } from "../Entry";
 
 import "./Entries.css";
 import { Fragment } from "react/jsx-runtime";
 
-const entries = [
-  {
-    id: 1000,
-    date: "Feb 5, 2025",
-    motto: "We are in a state of chaos",
-    notes:
-      "Today I learned about React State. It was fun! I can't wait to learn more.",
-  },
-  {
-    id: 999,
-    date: "Feb 4, 2025",
-    motto: "Props, Props, Props",
-    notes:
-      "Today I learned about React Props. Mad props to everyone who understands this!",
-  },
-  {
-    id: 998,
-    date: "Feb 3, 2025",
-    motto: "How to nest components online fast",
-    notes:
-      "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
-  },
-  {
-    id: 997,
-    date: "Feb 2, 2025",
-    motto: "I'm a React Developer",
-    notes: "My React-ion when I learned about React: 😍",
-  },
-];
+export type EntryType = {
+  id: number;
+  date: string;
+  motto: string;
+  notes: string;
+  isFavorite: boolean;
+};
 
-export function Entries() {
+type PropType = {
+  entries: EntryType[];
+  onToggleFavorite: (id: number) => void;
+};
+
+export function Entries({ entries, onToggleFavorite }: PropType) {
   return (
     <>
-      <Tabs />
       <section className="entry-list">
-        {entries.map((entry) => (
+        {entries.map((entry: EntryType) => (
           <Fragment key={entry.id}>
-            <Entry date={entry.date} motto={entry.motto} notes={entry.notes} />
+            <Entry
+              date={entry.date}
+              motto={entry.motto}
+              notes={entry.notes}
+              isFavorite={entry.isFavorite}
+              id={entry.id}
+              onToggleFavorite={onToggleFavorite}
+            />
           </Fragment>
         ))}
       </section>

@@ -1,13 +1,23 @@
 import "./EntryForm.css";
 import { Button } from "../Button";
 
-export function EntryForm() {
+export type FormDataType = {
+  [k: string]: FormDataEntryValue;
+};
+
+export function EntryForm({
+  onAddEntry,
+}: {
+  onAddEntry: (data: FormDataType) => void;
+}) {
   function onFormSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const entries = new FormData(event.target);
+    const entries = new FormData(event.currentTarget);
     const data = Object.fromEntries(entries);
+    onAddEntry(data);
 
-    console.log(data);
+    event.currentTarget.reset();
+    event.currentTarget.elements.motto.focus();
   }
 
   return (
