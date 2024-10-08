@@ -7,6 +7,7 @@ import { uid } from "uid";
 
 import "./App.css";
 import { Tabs } from "./components/Tabs";
+import useLocalStorageState from "use-local-storage-state";
 
 const initialEntries: EntryType[] = [
   {
@@ -43,7 +44,9 @@ const initialEntries: EntryType[] = [
 ];
 
 function App() {
-  const [entries, setEntries] = useState<EntryType[]>(initialEntries);
+  const [entries, setEntries] = useLocalStorageState<EntryType[]>("entries", {
+    defaultValue: initialEntries,
+  });
   const [filter, setFilter] = useState<string>("all");
   const favoriteEntries = entries.filter((entry) => entry.isFavorite);
 
