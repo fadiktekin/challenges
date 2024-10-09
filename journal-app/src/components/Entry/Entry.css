@@ -1,0 +1,14 @@
+article {
+  color: black;
+}
+
+time,
+p,
+h1 {
+  color: var(--color-granite);
+}
+
+.title-icon {
+  display: flex;
+  justify-content: space-between;
+}

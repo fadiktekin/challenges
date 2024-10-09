@@ -1,0 +1,8 @@
+header {
+  position: fixed;
+  width: inherit;
+  background-color: var(--color-water-10);
+  color: black;
+  font-weight: bold;
+  padding: 18px 16px;
+}
