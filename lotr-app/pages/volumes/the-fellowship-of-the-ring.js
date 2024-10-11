@@ -1,5 +1,5 @@
 import { volumes } from "../../lib/data";
-import { Volume } from "./Volume";
+import { Volume } from "../../components/Volume";
 
 export default function TheFellowshipoftheRing() {
   const volumeData = volumes.find(
