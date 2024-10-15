@@ -13,8 +13,6 @@ export default function QuickActions({
   allOn,
   allOff,
 }) {
-  console.log("allOff", allOff);
-  console.log("allOn", allOn);
   return (
     <StyledQuickActions>
       <Button type="button" onClick={toggleAllOff} disabled={allOff}>
